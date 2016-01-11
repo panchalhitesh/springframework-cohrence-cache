@@ -17,7 +17,7 @@
 		</license>
 	</licenses>
 	<scm>
-		<url>http://svn.apache.org/viewvc/maven</url>
+		<url>https://github.com/panchalhitesh/springframework-cohrence-cache.git</url>
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -220,14 +220,28 @@
 					<skipDeploy>true</skipDeploy>
 				</configuration>
 			</plugin>
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-scm-publish-plugin</artifactId> 
-				<configuration> <content>${project.reporting.outputDirectory}</content> <skipDeletedFiles>true</skipDeletedFiles> 
-				<checkoutDirectory>${project.build.directory}/scmpublish</checkoutDirectory> 
-				<checkinComment>Publishing site for ${project.artifactId}:${project.version}</checkinComment> 
-				<pubScmUrl>scm:git:https://github.com/osframework/spring-chronicle.git</pubScmUrl> 
-				<scmBranch>gh-pages</scmBranch> </configuration> <executions> <execution> 
-				<id>scm-publish</id> <phase>site-deploy</phase> <goals> <goal>publish-scm</goal> 
-				</goals> </execution> </executions> </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-publish-plugin</artifactId>
+				<configuration>
+					<content>${project.reporting.outputDirectory}</content>
+					<skipDeletedFiles>true</skipDeletedFiles>
+					<checkoutDirectory>${project.build.directory}/scmpublish</checkoutDirectory>
+					<checkinComment>Publishing site for
+						${project.artifactId}:${project.version}</checkinComment>
+					<pubScmUrl>scm:git:https://github.com/panchalhitesh/springframework-cohrence-cache.git</pubScmUrl>
+					<scmBranch>master</scmBranch>
+				</configuration>
+				<executions>
+					<execution>
+						<id>scm-publish</id>
+						<phase>site-deploy</phase>
+						<goals>
+							<goal>publish-scm</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
